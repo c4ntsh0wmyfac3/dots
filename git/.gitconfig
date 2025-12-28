@@ -1,0 +1,7 @@
+[user]
+	name = abumfxck
+	email = abumfxck@gmail.com
+[core]
+	editord = nvim
+[alias]
+	s = status

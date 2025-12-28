@@ -1,0 +1,50 @@
+[global]
+    # Задайте шрифт с поддержкой Nerd Fonts для иконок
+    # Например: "JetBrainsMono Nerd Font" или любой другой установленный Nerd Font
+    font = FiraCode Nerd Font Medium 10
+    
+    # Позиция (вверху справа)
+    geometry = "300x50-30+20"
+    
+    # Длительность показа уведомления в мс
+    
+    # Формат уведомления
+    format = "%s\n%b"
+    
+    # Игнорировать mouse/keyboard events.
+    allow_markup = yes
+    
+    # Установка прозрачности (от 0 до 100)
+    transparency = 35
+    
+    # Геометрия окна и отступы
+    width = 300
+    height = 50
+    corner_radius = 8
+    
+    # Отступы текста (padding)
+    horizontal_padding = 8
+    vertical_padding = 8
+
+# Цвета Catppuccin Mocha (для примера)
+# Background: Base (1e1e2e)
+# Foreground: Text (cdd6f1)
+# Border: Mauve (cba6f7)
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f1"
+    frame_color = "#cba6f7"
+    timeout = 3
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f1"
+    frame_color = "#89b4fa" # Blue
+    timeout = 5
+
+[urgency_critical]
+    background = "#1e1e2e"
+    foreground = "#cdd6f1"
+    frame_color = "#f38ba8" # Red
+    timeout = 0
