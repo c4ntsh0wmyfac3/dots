@@ -1,6 +1,6 @@
 [user]
-	name = abumfxck
-	email = abumfxck@gmail.com
+	name = c4ntsh0wmyfac3
+	email = c4ntsh0wmyfac3@gmail.com
 [core]
 	editord = nvim
 [alias]
@@ -9,3 +9,4 @@
   aa = add -A
   c = commit
   cm = commit -m
+  p = push

@@ -19,7 +19,7 @@ vim.g.mapleader = " "
 
 -- Keymaps
 vim.keymap.set('n', ';', ':')
-vim.keymap.set('n', ',u', ':update<CR> :source<CR>')
+vim.keymap.set('n', ',u', ':source $HOME/.config/nvim/init.lua<CR> :update<CR>')
 vim.keymap.set('n', '<leader>e', ':Ex<CR>')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d')
@@ -31,6 +31,9 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
+vim.keymap.set({'n', 'v'}, '<leader>d', '"+d')
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+P')
 
 
 -- Plugins
@@ -65,6 +68,7 @@ require "nvim-treesitter.configs".setup {
 -- Plugin settings
 vim.lsp.enable({ "lua_ls", "gopls" })
 vim.cmd("colorscheme kanso-zen")
+vim.cmd("hi Normal guibg=#10101a")
 vim.cmd("hi statusline guibg=NONE")
 
 -- Plugin keymaps
