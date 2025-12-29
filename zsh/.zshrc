@@ -30,6 +30,8 @@ bindkey '^E' clear-screen
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey '^F' autosuggest-accept
+bindkey -M viins '^U' backward-kill-line
+bindkey -M viins '^?' backward-delete-char
 
 setopt PROMPT_SUBST
 autoload -Uz compinit
@@ -46,7 +48,7 @@ CURRENT_VI_MODE=$VIM_INS_MODE
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]]; then
     CURRENT_VI_MODE=$VIM_NOR_MODE
-    echo -ne '\e[3 q' # Мигающее нижнее подчеркивание
+    echo -ne '\e[1 q' # Мигающее нижнее подчеркивание
   else
     CURRENT_VI_MODE=$VIM_INS_MODE
     echo -ne '\e[3 q' # Мигающая вертикальная черта
@@ -59,7 +61,7 @@ zle -N zle-keymap-select
 # Фикс: чтобы при нажатии Enter режим всегда сбрасывался в Insert
 function zle-line-init {
     CURRENT_VI_MODE=$VIM_INS_MODE
-    echo -ne '\e[5 q'
+    echo -ne '\e[3 q'
     zle reset-prompt
 }
 zle -N zle-line-init
@@ -92,12 +94,16 @@ git_custom_status() {
   fi
 
   # Проверка на наличие Clean (если вывод пустой - выводим галочку или ничего)
-  if [[ -z "$stat" ]]; then
-    indicators+="%F{green}✔%f"
-  fi
+  # if [[ -z "$stat" ]]; then
+  #   indicators+="%F{green}✔%f"
+  # fi
 
   echo "%F{magenta}(%F{cyan}$branch%F{magenta})%f$indicators"
 }
 
 PROMPT='%F{blue}%~$(git_custom_status)%F{green}>%f'
 RPROMPT='${CURRENT_VI_MODE}%(?.%F{green}^%f.%F{red}!)%F{gray}%T%f'
+
+# bindkey -M viins '^?' backward-delete-char
+# bindkey -M viins '^H' backward-delete-char
+# bindkey -M vicmd '^?' backward-delete-char
