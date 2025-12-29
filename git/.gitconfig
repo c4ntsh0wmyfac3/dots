@@ -5,3 +5,7 @@
 	editord = nvim
 [alias]
 	s = status
+  a = add
+  aa = add -A
+  c = commit
+  cm = commit -m

@@ -16,21 +16,17 @@
       "rev": "bd5a7d6",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
+    "cmp-path": {
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
+      "src": "https://github.com/hrsh7th/cmp-path"
+    },
     "cmp_luasnip": {
       "rev": "98d9cb5",
       "src": "https://github.com/saadparwaiz1/cmp_luasnip"
     },
-    "coal.nvim": {
-      "rev": "06667da",
-      "src": "https://github.com/cranberry-clockworks/coal.nvim"
-    },
-    "darkvoid.nvim": {
-      "rev": "45be993",
-      "src": "https://github.com/darkvoid-theme/darkvoid.nvim"
-    },
-    "e-ink.nvim": {
-      "rev": "c90bf52",
-      "src": "https://github.com/e-ink-colorscheme/e-ink.nvim"
+    "friendly-snippets": {
+      "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "gitsigns.nvim": {
       "rev": "1ee5c1f",
@@ -44,37 +40,13 @@
       "rev": "c2525eb",
       "src": "https://github.com/webhooked/kanso.nvim"
     },
-    "lackluster.nvim": {
-      "rev": "70dd682",
-      "src": "https://github.com/slugbyte/lackluster.nvim"
-    },
     "lazygit.nvim": {
       "rev": "2305dee",
       "src": "https://github.com/kdheepak/lazygit.nvim"
     },
-    "lualine.nvim": {
-      "rev": "3946f01",
-      "src": "https://github.com/nvim-lualine/lualine.nvim"
-    },
-    "mini-git": {
-      "rev": "dcb13b6",
-      "src": "https://github.com/nvim-mini/mini-git"
-    },
-    "mini.pick": {
-      "rev": "96ee37d",
-      "src": "https://github.com/nvim-mini/mini.pick"
-    },
-    "monochrome.nvim": {
-      "rev": "2de78d9",
-      "src": "https://github.com/kdheepak/monochrome.nvim"
-    },
     "nvim-cmp": {
       "rev": "cf22c9e",
       "src": "https://github.com/hrsh7th/nvim-cmp"
-    },
-    "nvim-highlight-colors": {
-      "rev": "e0c4a58",
-      "src": "https://github.com/brenoprata10/nvim-highlight-colors"
     },
     "nvim-lspconfig": {
       "rev": "ac98db2",
