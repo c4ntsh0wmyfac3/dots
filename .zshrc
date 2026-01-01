@@ -18,6 +18,7 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 bindkey -M vicmd 'p' up-line-or-beginning-search
 bindkey -M vicmd 'n' down-line-or-beginning-search
+alias n='nvim'
 alias tn='tmux new -s '
 alias tna='tmux'
 alias ta='tmux attach'
