@@ -24,8 +24,8 @@ filetype on
 set mouse=a
 set ttyfast          
 set autoread
-set termguicolors
-colorscheme habamax
+"set termguicolors
+"colorscheme habamax
 
 "  Keymaps
 let mapleader = "\<Space>"

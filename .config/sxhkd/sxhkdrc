@@ -17,22 +17,12 @@ super + shift + {f,p}
   {firefox, \
   firefox --private-window}
 
-# super + ctrl + l
-#   ~/bin/screen-lock
-
 # make sxhkd reload its configuration files:
 super + Escape + r
 	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
-#
-
-# Alt_L + shift
-#   sh $HOME/bin/change_language.sh
-#
-# Shift_L + alt
-#   sh $HOME/bin/change_language.sh
 
 # quit/restart bspwm
 super + ctrl + {q,r}
@@ -79,7 +69,7 @@ super + {_,shift + }{h,j,k,l}
 # 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }n
+super + {n,p}
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor

@@ -19,6 +19,7 @@ bindkey "^[[B" down-line-or-beginning-search
 bindkey -M vicmd 'p' up-line-or-beginning-search
 bindkey -M vicmd 'n' down-line-or-beginning-search
 alias n='nvim'
+alias td='~/dev/projects/todo-list/main'
 alias tn='tmux new -s '
 alias tna='tmux'
 alias ta='tmux attach'
@@ -53,15 +54,6 @@ function zle-keymap-select {
 }
 
 zle -N zle-keymap-select
-echo -ne '\e[3 q'
-
-function zle-line-init {
-    CURRENT_VI_MODE=$VIM_INS_MODE
-    echo -ne '\e[3 q'
-    zle reset-prompt
-}
-zle -N zle-line-init
-
 git_custom_status() {
   local branch=$(git branch --show-current 2>/dev/null)
   [[ -z "$branch" ]] && return
