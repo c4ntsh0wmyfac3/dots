@@ -11,11 +11,13 @@ vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
 vim.o.scrolloff = 10
 vim.o.cursorline = true
-vim.o.wrap = false
+vim.o.wrap = true
 vim.g.mapleader = " "
 vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
 
 vim.keymap.set('n', ';', ':')
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('n', ',u', ':update<CR> :source $HOME/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>e', ':Ex<CR>')
 vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', {})
@@ -46,6 +48,7 @@ vim.pack.add({
   "https://github.com/L3MON4D3/LuaSnip",
   "https://github.com/saadparwaiz1/cmp_luasnip",
   "https://github.com/rafamadriz/friendly-snippets",
+  "https://github.com/rebelot/kanagawa.nvim"
 })
 vim.lsp.enable({ "lua_ls", "gopls", "clangd" })
 local cmp = require('cmp')
@@ -62,6 +65,10 @@ vim.cmd("hi signcolumn guibg=none")
 vim.cmd("hi DiagnosticSignWarn guibg=none")
 vim.cmd("hi DiagnosticSignErr guibg=none")
 vim.cmd("hi DiagnosticSignHint guibg=none")
+vim.cmd("hi CursorLine guibg=none")
+vim.cmd("hi CursorLineNr guibg=none")
+vim.cmd("hi StatuslineNC guibg=none")
+
 
 vim.keymap.set('n', "<C-h>", ":NvimTmuxNavigateLeft<CR>")
 vim.keymap.set('n', "<C-j>", ":NvimTmuxNavigateDown<CR>")

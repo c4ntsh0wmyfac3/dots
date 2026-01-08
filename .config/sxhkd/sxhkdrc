@@ -4,21 +4,21 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	xterm
 
 # program launcher
-super + {d,u,x}
-	{rofi -show drun, rofi -show window, systemctl suspend}
+super + {r,b,s}
+	{dmenu_run, qutebrowser, systemctl suspend}
 
-super + b
+super + p
   sh ~/.config/polybar/toggle-bar.sh
 
-super + shift + {f,p}
-  {firefox, \
-  firefox --private-window}
+# super + shift + {f,p}
+#   {firefox, \
+#   firefox --private-window}
 
 # make sxhkd reload its configuration files:
-super + Escape + r
+super + alt + r
 	pkill -USR1 -x sxhkd
 
 #

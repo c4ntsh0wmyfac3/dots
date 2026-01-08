@@ -28,14 +28,14 @@ cursor = '0xb8bb26'
 
 
 [window]
-opacity = 0.7
+opacity = 0.6
 blur = true
 
 [font]
 size = 12
 
 [font.normal]
-#family ="Hack Nerd Font Mono"
+family ="Hack Nerd Font Mono"
 # style = "Bold"
 
 [env]
